@@ -1,10 +1,10 @@
 export function response(message, status, res){
     const template = {
-        message:message[0],
+        data: message,
         status:status
     }
 
-    res.send(template)
+    res.status(status).json(template)
     console.log(template)
 }
 

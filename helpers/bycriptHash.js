@@ -10,3 +10,12 @@ export function hash(password,salt){
    }
    
 }
+
+export async function compere(password, pashash , salt){
+   const resaultCompere = await bcrypt.compare(password, pashash );
+   if (resaultCompere){
+      return resaultCompere;
+   }else{
+      return false
+   }
+}

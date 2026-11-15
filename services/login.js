@@ -1,14 +1,16 @@
 import users from '../models/catchUsers.js'
-import {hash} from '../helpers/bycriptHash.js'
+import {compere} from '../helpers/bycriptHash.js'
 export default async function logins(req){
     
-    // const sqlcomand = "SELECT * FROM login WHERE nama = ?";
-    const { username, password } = req.body;
+    const { name, password } = req.body;
     // const usernya = password;
-    const resaultdb = await users(username);  
-    const rehashpass = await hash(password)
-    console.log(resaultdb);
-    return resaultdb
+    const resaultdb = await users(name);
+    const passhash = resaultdb[0].password   
+    const compereHash = await compere(password, passhash )
+    console.log("ini hasilnya pasti: ", compereHash);
+    
+    
+    return compereHash
   
  
     
