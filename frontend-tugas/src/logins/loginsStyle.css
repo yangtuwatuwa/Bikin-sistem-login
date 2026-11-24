@@ -1,0 +1,548 @@
+
+
+.retro-desktop {
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    padding: 64px 20px 58px;
+
+
+    font-family: Inter, 'Segoe UI', sans-serif;
+
+    
+       
+}
+
+
+
+
+
+.menu-bar {
+    position: absolute;
+    z-index: 4;
+
+    inset: 0 0 auto;
+
+    height: 31px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+    color: #242424;
+
+    background: linear-gradient(#fffE, #dadee6eF);
+
+    box-shadow: 0 1px 3px #0002;
+
+    font-size: 11px;
+}
+
+.menu-left,
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.apple-logo {
+    font-size: 18px;
+}
+
+.desktop-footer {
+    position: absolute;
+    z-index: 2;
+
+    right: 20px;
+    bottom: 16px;
+    left: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #ffffffe8;
+
+    font-size: 10px;
+    text-shadow: 0 1px 3px #0009;
+}
+
+.system-status {
+    display: flex;
+    gap: 14px;
+}
+
+
+
+.login-window {
+    position: relative;
+    z-index: 2;
+
+    width: min(420px, 100%);
+
+    overflow: hidden;
+
+    border: 1px solid #ffffffed;
+    border-radius: 11px;
+
+    background: linear-gradient(#f9f9f9, #ddd);
+
+    box-shadow:
+        0 25px 65px #0006,
+        0 3px 8px #0003,
+        inset 0 1px white;
+
+    animation: window-enter .55s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+/* Window entrance animation */
+
+@keyframes window-enter {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ========================================
+   WINDOW TITLE BAR
+======================================== */
+
+.titlebar {
+    height: 38px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid #bcbcbc;
+
+    background: linear-gradient(#fdfdfd, #d5d5d5);
+
+    box-shadow: inset 0 1px white;
+}
+
+.window-controls {
+    position: absolute;
+    left: 12px;
+
+    display: flex;
+    gap: 7px;
+}
+
+.traffic {
+    width: 12px;
+    height: 12px;
+
+    border: 1px solid #0003;
+    border-radius: 50%;
+
+    box-shadow: inset 0 1px #ffffffcc;
+}
+
+.traffic.red {
+    background: linear-gradient(#ff9a91, #ef5049);
+}
+
+.traffic.yellow {
+    background: linear-gradient(#ffe48c, #e6b936);
+}
+
+.traffic.green {
+    background: linear-gradient(#9ce6a0, #45b95a);
+}
+
+.window-title {
+    color: #444;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-shadow: 0 1px white;
+}
+
+
+/* ========================================
+   LOGIN CONTENT
+======================================== */
+
+.window-content {
+    padding: 28px 34px 27px;
+    text-align: center;
+}
+
+
+/* User avatar */
+
+.system-icon {
+    width: 76px;
+    height: 76px;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    margin: 0 auto 15px;
+
+    border: 3px solid #ffffffe8;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #83c9ff,
+        #2988df 48%,
+        #0755a9
+    );
+
+    box-shadow:
+        0 3px 6px #0004,
+        inset 0 2px 4px #ffffff8c;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 7px;
+}
+
+.avatar-head {
+    width: 25px;
+    height: 25px;
+
+    margin-bottom: 4px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(#fff, #e7f1fa);
+}
+
+.avatar-body {
+    width: 48px;
+    height: 28px;
+
+    border-radius: 50% 50% 35% 35%;
+
+    background: linear-gradient(#fff, #e7f1fa);
+}
+
+
+/* Heading and subtitle */
+
+.heading {
+    margin: 0 0 6px;
+
+    color: #333;
+
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+}
+
+.subtitle {
+    margin: 0 0 25px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+
+.retro-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #555;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Input fields */
+
+.retro-input {
+    width: 100%;
+    height: 38px;
+
+    padding: 0 11px;
+
+    border: 1px solid #aaa;
+    border-radius: 6px;
+
+    outline: none;
+
+    color: #333;
+
+    background: linear-gradient(
+        #f6f6f6,
+        #fff 35%,
+        #f5f5f5
+    );
+
+    box-shadow:
+        inset 0 1px 3px #0002,
+        0 1px white;
+
+    font: inherit;
+    font-size: 13px;
+
+    transition: .2s;
+}
+
+.retro-input:focus {
+    border-color: #398de0;
+
+    box-shadow:
+        0 0 0 3px #4191eb33,
+        inset 0 1px 3px #0002;
+}
+
+.retro-input::placeholder {
+    color: #aaa;
+}
+
+
+/* Password visibility */
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap .retro-input {
+    padding-right: 92px;
+}
+
+.show-password {
+    position: absolute;
+
+    top: 50%;
+    right: 7px;
+
+    transform: translateY(-50%);
+
+    padding: 5px;
+
+    border: 0;
+
+    color: #687789;
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 0 19px;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    cursor: pointer;
+}
+
+.remember input {
+    accent-color: #2788e5;
+}
+
+.forgot {
+    padding: 0;
+
+    border: 0;
+
+    color: #2879c7;
+    background: none;
+
+    cursor: pointer;
+
+    font: inherit;
+    font-weight: 500;
+}
+
+
+
+.login-button {
+    width: 100%;
+    height: 39px;
+
+    border: 1px solid #1768ba;
+    border-radius: 7px;
+
+    color: white;
+
+    background: linear-gradient(
+        #80c9ff,
+        #40a2f1 35%,
+        #1674d2 52%,
+        #0960b8
+    );
+
+    box-shadow:
+        inset 0 1px #ffffffcc,
+        inset 0 -1px 2px #0003,
+        0 2px 3px #0003;
+
+    cursor: pointer;
+
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-shadow: 0 -1px #0004;
+
+    transition: filter .15s, transform .15s;
+}
+
+.login-button:hover:not(:disabled) {
+    filter: brightness(1.08);
+}
+
+.login-button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.login-button:disabled {
+    cursor: wait;
+    opacity: .65;
+}
+
+
+.message {
+    margin: 13px 0 0;
+
+    padding: 9px;
+
+    border: 1px solid #e1c477;
+    border-radius: 5px;
+
+    color: #795d19;
+
+    background: linear-gradient(#fff7e0, #ffedbd);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.message.error {
+    border-color: #e7b2b2;
+
+    color: #a13e3e;
+
+    background: #fff0f0;
+}
+
+.divider {
+    height: 1px;
+
+    margin: 23px 0 14px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #bcbcbc,
+        transparent
+    );
+}
+
+.footer-note {
+    color: #888;
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.footer-note strong {
+    color: #666;
+}
+
+
+
+@media (max-width: 480px) {
+    .retro-desktop {
+        padding: 48px 15px 55px;
+    }
+
+    .login-window {
+        max-width: 370px;
+    }
+
+    .window-content {
+        padding: 24px 23px;
+    }
+
+    .menu-left,
+    .menu-right {
+        gap: 8px;
+    }
+
+    .menu-bar {
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .desktop-footer {
+        font-size: 9px;
+    }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

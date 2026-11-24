@@ -20,6 +20,7 @@ app.use(cors())
 app.use(e.static(join(__dirname, "public")))
 app.use(seasion)
 app.use("/",get)
+app.use("/", post)
 app.use("/post", post)
 
 

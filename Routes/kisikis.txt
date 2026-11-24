@@ -1,0 +1,4 @@
+paralel dari jam 8 sampai setengah 1 
+- 3 mapel jadi 1 PPDB 
+- pemodelan database menggunakan web / laravel 
+- 
